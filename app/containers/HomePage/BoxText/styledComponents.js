@@ -32,10 +32,11 @@ export const Title = styled.h2`
 `;
 
 export const TextAnimation = styled(Typed)`
+  font-size: 2.5rem;
+  padding: 0 1rem;
   color: #fff;
-  font-size: 1.8rem;
   text-shadow: 5px 0px 10px #333;
   ${breakpoint('md')`
-    font-size: 2.7rem;
+    font-size: 3.5rem;
   `}
 `;

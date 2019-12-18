@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
 import { Link } from 'react-scroll';
+import { Animated } from 'react-animated-css';
 import { colors } from '../../../global-styles';
 
-export const ContentHeader = styled.div`
+export const ContentHeader = styled(Animated)`
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -8,6 +8,7 @@ import React from 'react';
 // import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import Title from '../../../components/Title';
 
 import {
   AboutSection,
@@ -23,8 +24,7 @@ function About() {
     <AboutSection>
       <AboutContent>
         <AboutTitle>
-          <h2>About</h2>
-          <h3>Us</h3>
+          <Title type={2} text="About Us" color="#333" align="center" />
         </AboutTitle>
         <AboutDescription>
           <p>

@@ -105,12 +105,12 @@ export const BoxDescription = styled.div`
   ${breakpoint('md')`
     padding: 8% 7%;
     p {
-      font-size: 1.1rem;
+      font-size: 1.5rem;
     }
   `}
   ${breakpoint('xxl')`
     p {
-      font-size: 1.3rem;
+      font-size: 1.7rem;
     }
   `}
 `;

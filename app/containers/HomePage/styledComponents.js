@@ -11,7 +11,7 @@ export const PageHome = styled.div`
 
 export const ContentCarousel = styled.div`
   display: flex;
-  height: 92vh;
+  height: 88vh;
   width: 100%;
   position: relative;
   &:after {
@@ -45,6 +45,12 @@ export const ContentProjects = styled.div`
   position: relative;
   padding: 5rem 10% 0;
   background: #fff;
+`;
+
+export const ContentTitle = styled.div`
+  display: flex;
+  width: 100%;
+  padding: 0 1rem;
 `;
 
 export const ContentSvgs = styled.div`
@@ -98,12 +104,12 @@ export const SvgBig = styled.svg`
   `}
 `;
 
-export const Portafolio = styled(Element)`
+export const Section = styled(Element)`
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
-`;
-
-export const Team = styled(Element)`
-  display: flex;
-  width: 100%;
+  position: relative;
+  &[name='portafolio'] {
+    padding-top: 8rem;
+  }
 `;

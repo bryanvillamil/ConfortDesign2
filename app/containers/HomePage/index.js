@@ -9,7 +9,6 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
-import { Element } from 'react-scroll';
 import { injectIntl } from 'react-intl';
 
 import { useInjectSaga } from 'utils/injectSaga';
@@ -21,12 +20,14 @@ import withViewportHandler from '../../components/withViewportHandler';
 import makeSelectHomePage from './selectors';
 import reducer from './reducer';
 import saga from './saga';
-// import messages from './messages';
+
+// import { projects } from '../../data/home';
 
 import { getDataProjects } from './actions';
 
 import About from './About';
 import Boxtext from './BoxText';
+import Title from '../../components/Title';
 
 import BgHome from '../../images/Home/bgHome.jpg';
 import { HeightContent } from '../Layout';
@@ -35,12 +36,12 @@ import {
   PageHome,
   ContentCarousel,
   ImgHome,
+  ContentTitle,
   ContentProjects,
   ContentSvgs,
   SvgSmall,
   SvgBig,
-  Portafolio,
-  Team,
+  Section,
 } from './styledComponents';
 
 export function HomePage(props) {
@@ -120,7 +121,12 @@ export function HomePage(props) {
         />
       )}
 
-      <Portafolio name="portafolio">
+      <About />
+
+      <Section name="portafolio">
+        <ContentTitle>
+          <Title type={2} text="Portafolio" color="#333" align="center" />
+        </ContentTitle>
         <ContentProjects>
           {dataProjects.map(e => (
             <Box
@@ -131,17 +137,19 @@ export function HomePage(props) {
             />
           ))}
         </ContentProjects>
-      </Portafolio>
+      </Section>
 
-      <Team name="team">
-        <h1>Element Team</h1>
-      </Team>
+      <Section name="team">
+        <ContentTitle>
+          <Title type={2} text="Team" color="#333" align="center" />
+        </ContentTitle>
+      </Section>
 
-      <Element name="contact">
-        <h1>Element Contact</h1>
-      </Element>
-
-      <About />
+      <Section name="contact">
+        <ContentTitle>
+          <Title type={2} text="Contact" color="#333" align="center" />
+        </ContentTitle>
+      </Section>
     </PageHome>
   );
 }

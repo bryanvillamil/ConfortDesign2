@@ -1,7 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const colors = {
-  colorPrimary: '#CF9D3A',
+  colorPrimary: '#66829A',
+  // colorPrimary: '#345A99',
+  colorSecundary: '#DEDDD7',
   blackRGBA: 'rgba(0,0,0, .8)',
   black: '#000000',
   white: '#ffffff',
@@ -15,6 +17,10 @@ export const centerFlex = {
 };
 
 const GlobalStyle = createGlobalStyle`
+  html {
+    font-size: 10px;
+  }
+  
   html,
   body {
     height: 100%;

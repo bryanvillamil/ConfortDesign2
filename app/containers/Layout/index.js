@@ -36,7 +36,7 @@ export function Layout(props) {
 
   const [openMenu, setOpenMenu] = useState(false);
 
-  const { pathname, title } = props;
+  const { title } = props;
 
   return (
     <GeneralContainer className={openMenu ? 'MenuIsOpen' : ''}>
@@ -50,21 +50,36 @@ export function Layout(props) {
         <ListMobile>
           <ItemMobile>
             <LinkMobile
-              selected={pathname === '/portafolio'}
-              href="/portafolio"
+              to="portafolio"
+              spy
+              smooth
+              delay={100}
+              duration={1000}
+              activeClass="active"
             >
               Portafolio
             </LinkMobile>
           </ItemMobile>
           <ItemMobile>
-            <LinkMobile selected={pathname === '/our-team'} href="/our-team">
+            <LinkMobile
+              to="team"
+              spy
+              smooth
+              delay={100}
+              duration={1000}
+              activeClass="active"
+            >
               Our Team
             </LinkMobile>
           </ItemMobile>
           <ItemMobile>
             <LinkMobile
-              selected={pathname === '/contact-us'}
-              href="/contact-us"
+              to="contact"
+              spy
+              smooth
+              delay={100}
+              duration={1000}
+              activeClass="active"
             >
               Contact Us
             </LinkMobile>
@@ -77,7 +92,6 @@ export function Layout(props) {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  pathname: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
 };
 

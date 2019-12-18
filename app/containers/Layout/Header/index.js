@@ -29,7 +29,13 @@ function Header(props) {
   const PageHome = pathname === '/';
 
   return (
-    <ContentHeader>
+    <ContentHeader
+      animationIn="slideInDown"
+      animationOut="slideOutUp"
+      animationInDuration={1800}
+      animationOutDuration={1800}
+      isVisible={false}
+    >
       <HeaderLogo>
         {PageHome ? (
           <img src={ImgLogo} alt="Logo" />

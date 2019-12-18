@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
+import { Link } from 'react-scroll';
 
 export const GeneralContainer = styled.div`
   width: 100%;
   height: 100%;
   &.MenuIsOpen {
-    overflow: hidden;
+    overflow-y: hidden;
   }
 `;
 
@@ -30,7 +31,7 @@ export const MenuMobile = styled.div`
   justify-content: center;
   position: absolute;
   height: 100vh;
-  width: 100%;
+  width: 30rem;
   background: -moz-linear-gradient(
     bottom,
     rgba(0, 0, 0, 1) 0%,
@@ -63,8 +64,8 @@ export const ListMobile = styled.ul`
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 2rem 0 6rem;
-  align-content: space-around;
+  padding: 6rem 0 6rem;
+  align-content: flex-start;
   height: 90%;
   margin: auto;
   ${breakpoint('sm')`
@@ -102,7 +103,7 @@ export const ItemMobile = styled.li`
   `}
 `;
 
-export const LinkMobile = styled.a`
+export const LinkMobile = styled(Link)`
   cursor: pointer;
   font-size: 1.8rem;
   text-decoration: none;

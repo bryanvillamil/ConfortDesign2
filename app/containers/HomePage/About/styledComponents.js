@@ -14,14 +14,14 @@ export const AboutSection = styled.section`
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  height: 25rem;
+  height: 28rem;
   padding: 5rem 2rem;
   ${breakpoint('md')`
     background-size: cover;
-    height: 25rem;
+    height: 32rem;
   `}
   ${breakpoint('lg')`
-    height: 28rem;
+    height: 40rem;
   `}
 `;
 
@@ -35,33 +35,22 @@ export const AboutContent = styled.div`
     width: 20rem;
   `}
   ${breakpoint('md')`
-    width: 38rem;
+    width: 50rem;
   `}
 `;
 
 export const AboutTitle = styled.div`
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  h2 {
-    font-size: 2.5rem;
-    margin: 0;
-  }
-  h3 {
-    font-size: 2.5rem;
-    margin: 0;
-    padding-left: 0.8rem;
-  }
   ${breakpoint('md')`
-    width: 40%;
+    width: 35%;
     flex-direction: column;
     align-items: flex-end;
     h2 {
       font-size: 3.5rem;
-    }
-    h3 {
-      font-size: 3rem;
     }
   `}
 `;
@@ -71,14 +60,18 @@ export const AboutDescription = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  p {
+    font-size: 1.5rem;
+  }
   ${breakpoint('md')`
-    width: 55%;
+    width: 65%;
   `}
 `;
 
 export const AboutButton = styled.div`
   width: 100%;
   ${centerFlex};
+  padding-top: 1rem;
 `;
 
 export const Button = styled.a`

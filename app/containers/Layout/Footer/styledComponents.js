@@ -7,7 +7,7 @@ export const ContentFooter = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
-  background: ${colors.black};
+  background: ${colors.colorSecundary};
   padding: 3rem 4% 1.5rem;
   position: relative;
   z-index: 9;
@@ -41,7 +41,7 @@ export const FooterLeft = styled.div`
 `;
 
 export const Textinfo = styled.span`
-  color: ${colors.white};
+  color: ${colors.black};
   font-family: 'Frut Light';
   font-size: 1.3rem;
   padding-top: 4px;
@@ -71,7 +71,7 @@ export const FooterCenter = styled.div`
 export const TitleFooter = styled.h2`
   display: flex;
   font-size: 2rem;
-  color: ${colors.colorPrimary};
+  color: ${colors.black};
   align-items: center;
   font-family: 'Trajan Pro';
   ${breakpoint('lg')`
@@ -99,7 +99,7 @@ export const FooterRight = styled.div`
 
 export const Link = styled.a`
   display: flex;
-  color: ${colors.white};
+  color: ${colors.black};
   font-size: 1.5rem;
   padding-top: 2rem;
   transition: all 0.5s;

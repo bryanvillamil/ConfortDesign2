@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
 import { Link } from 'react-scroll';
+import { Animated } from 'react-animated-css';
 import { colors } from '../../global-styles';
 
-export const ContentHeader = styled.div`
+export const ContentHeader = styled(Animated)`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -14,8 +15,9 @@ export const ContentHeader = styled.div`
   top: 0;
   left: 0;
   z-index: 999;
-  background: rgba(0,0,0, 0.4);
-  box-shadow: 1px 1px 3px #333;
+  ${'' /* background: rgba(0, 0, 0, 0.5); */}
+  background: ${colors.colorPrimary};
+  box-shadow: 1px 1px 8px #333;
   ${breakpoint('md')`
     padding: 1rem 2rem;
   `}
@@ -94,20 +96,20 @@ export const Item = styled.li`
 export const ItemLink = styled(Link)`
   display: flex;
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 1.3rem;
   text-decoration: none;
   transition: all 0.5s;
-  padding: 0 0 0.5rem;
+  ${'' /* padding: 0 0 0.5rem; */}
   color: #fff;
   position: relative;
   cursor: pointer;
   &.active {
-    color: ${colors.colorPrimary};
+    color: ${colors.black};
   }
   &:after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -5px;
     left: 0;
     width: 100%;
     height: 2px;
@@ -118,7 +120,7 @@ export const ItemLink = styled(Link)`
     transition-delay: 0.4s;
   }
   &:hover {
-    color: ${colors.colorPrimary};
+    color: ${colors.black};
     &:after {
       transform: scale3d(1, 1, 1);
       transition-delay: 0s;
