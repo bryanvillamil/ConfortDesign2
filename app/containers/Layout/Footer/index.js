@@ -26,7 +26,7 @@ function Footer() {
       <FooterRight>
         <Link href="/terms">Terms & Conditions</Link>
         <Link href="/privacy">Privacy Policy</Link>
-        <Textinfo>Copyright © 2019 confortDesign</Textinfo>
+        <Textinfo>Copyright © 2019</Textinfo>
       </FooterRight>
     </ContentFooter>
   );

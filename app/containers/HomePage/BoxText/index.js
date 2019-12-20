@@ -24,7 +24,7 @@ function BoxText() {
 
   return (
     <ContentText>
-      <Title type={1} text="ConfortDesing" color="#fff" align="center" />
+      <Title type={1} text="ConfortDesign" color="#fff" align="center" />
       <TextAnimation
         strings={[
           'Te Damos Alegria',
@@ -32,6 +32,7 @@ function BoxText() {
           'Te Damos Color',
           'Te Damos Hogar',
           'Bienvenido',
+          '',
         ]}
         typeSpeed={80}
         backSpeed={70}

@@ -48,7 +48,6 @@ export function HomePage(props) {
   useInjectReducer({ key: 'homePage', reducer });
   useInjectSaga({ key: 'homePage', saga });
 
-  // const [OpenMenu, setOpenMenu] = useState(false);
   const [isHeader, setIsHeader] = useState(false);
   const [valueHeight, setValueHeight] = useState(0);
   const { title, openMenu, setOpenMenu } = useContext(HeightContent);
@@ -69,6 +68,7 @@ export function HomePage(props) {
       setIsHeader(true);
     } else {
       setIsHeader(false);
+      setOpenMenu(false);
     }
   };
 
@@ -121,8 +121,6 @@ export function HomePage(props) {
         />
       )}
 
-      <About />
-
       <Section name="portafolio">
         <ContentTitle>
           <Title type={2} text="Portafolio" color="#333" align="center" />
@@ -138,6 +136,8 @@ export function HomePage(props) {
           ))}
         </ContentProjects>
       </Section>
+
+      <About />
 
       <Section name="team">
         <ContentTitle>
