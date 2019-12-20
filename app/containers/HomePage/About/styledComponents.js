@@ -32,9 +32,9 @@ export const AboutContent = styled.div`
   flex-wrap: wrap;
   margin: auto;
   ${breakpoint('xs')`
-    width: 20rem;
+    width: 35rem;
   `}
-  ${breakpoint('md')`
+  ${breakpoint('sm')`
     width: 50rem;
   `}
 `;
